@@ -5,7 +5,7 @@ services:
     buildCommand: "pip install -r requirements.txt"
     startCommand: "gunicorn run:app"
     envVars:
-      - key: DATABASE_URL
+      - key: postgresql://license_server_ytfa_user:fYAhu0TvK93Et3dyvC2nOla8PHBhGG42@dpg-d0ti42k9c44c739h0lgg-a.oregon-postgres.render.com/license_server_ytfa
         fromDatabase:
-          name: your-database-name
+          name: license_server_ytfa
           property: connectionString
